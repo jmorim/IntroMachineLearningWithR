@@ -86,8 +86,8 @@ predicted class.
 
 ```{r knn1}
 set.seed(12L)
-tr <- sample(150, 50)
-nw <- sample(150, 50)
+tr <- sample(nrow(iris), 50)
+nw <- sample(nrow(iris), 50)
 library("class")
 knnres <- knn(iris[tr, -5], iris[nw, -5], iris$Species[tr])
 head(knnres)
